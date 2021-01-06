@@ -33,22 +33,20 @@ class ability {
         return (this.healing * this.targets) / this.mana;
     }
 
-}
-
-
-function report(ability) {
-    // Report details about the ability
-    console.log();
-    console.log(
-        `| ${ability.name}\n`+
-        `| hps / second : ${ability.healPerSecond()}\n`+
-        `| hps / mana   : ${ability.healPerMana()}`
-    );
-    if (ability.extras) {
-        for (var i = 0;i < ability.extras.length;i++) {console.log(
-        `| Extra        : ${ability.extras[i]}`
-        )};
-    };
+    report() {
+        // Report details about the ability
+        console.log();
+        console.log(
+            `| ${this.name}\n`+
+            `| hps / second : ${this.healPerSecond()}\n`+
+            `| hps / mana   : ${this.healPerMana()}`
+        );
+        if (ability.extras) {
+            for (var i = 0;i < this.extras.length;i++) {console.log(
+            `| Extra        : ${this.extras[i]}`
+            )};
+        };
+    }
 }
 
 const abilities = [];
@@ -105,18 +103,6 @@ abilities.push(
     )
 );
 
-// Yulon
-
-// Revival
-
-// Essence Font
-
-// Expel Harm
-
-// Faeline Stomp
-
-// Bag of Tricks
-
 abilities.push(
     new ability(
         'Refreshing Jade Wind', // name
@@ -129,7 +115,86 @@ abilities.push(
     )
 );
 
+abilities.push(
+    new ability(
+        'Essence Font', // name
+        3600, // mana
+        0, // castingtime
+        5.4, // duration
+        12, // cooldown
+        6, // targets
+        (703 + 418) * 6 // healing
+    )
+);
+
+// Expel Harm
+abilities.push(
+    new ability(
+        'Expel Harm', // name
+        1500, // mana
+        0, // castingtime
+        1, // duration
+        15, // cooldown
+        1, // targets
+        2279, // healing
+        'Also heals the target if cast during Soothing Mist'
+    )
+);
+
+// Yulon
+abilities.push(
+    new ability(
+        'Yulon', // name
+        2500, // mana
+        0, // castingtime
+        25, // duration
+        180, // cooldown
+        3, // targets
+        ( 1564 / 4 ) * 25 // healing per 4 seconds
+    )
+);
+
+// Revival
+abilities.push(
+    new ability(
+        'Revival', // name
+        2187, // mana
+        0, // castingtime
+        1, // duration
+        180, // cooldown
+        [10, 14, 20], // targets
+        4576.2 // healing
+    )
+);
+
+// Faeline Stomp
+abilities.push(
+    new ability(
+        'Faeline Stomp', // name
+        2000, // mana
+        0, // castingtime
+        1, // duration
+        30, // cooldown
+        5, // targets
+        1356 * 5, // healing
+        ['Each target is also healed by an Essence Font bolt']
+    )
+);
+
+// Bag of Tricks
+abilities.push(
+    new ability(
+        'Bag of Tricks', // name
+        0, // mana
+        0, // castingtime
+        1, // duration
+        90, // cooldown
+        1, // targets
+        4652 // healing
+    )
+);
+
 // Display report for each ability
 for (var i = 0;i < abilities.length;i++) {
-    report(abilities[i])
+    abilities[i].report()
 };
