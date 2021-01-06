@@ -1,0 +1,146 @@
+[
+    {
+        "name": "Renewing Mist",
+        "mana": 1100,
+        "castingtime": 0,
+        "duration": 20,
+        "cooldown": 9,
+        "targets": 1,
+        "healing": 3733,
+        "extras": false,
+        "hpPerSecond": 186.65,
+        "hpPerMana": 3.3936363636363636
+    },
+    {
+        "name": "Soothing Mist",
+        "mana": 200,
+        "castingtime": 0,
+        "duration": 7.2,
+        "cooldown": 0,
+        "targets": 1,
+        "healing": 6557,
+        "extras": [
+            "During channel you may cast Enveloping Mist and Vivify instantly"
+        ],
+        "hpPerSecond": 910.6944444444445,
+        "hpPerMana": 32.785
+    },
+    {
+        "name": "Enveloping Mist",
+        "mana": 3000,
+        "castingtime": 1.8,
+        "duration": 7,
+        "cooldown": 0,
+        "targets": 1,
+        "healing": 6968,
+        "extras": [
+            "Increase healing from my other spells by 40%"
+        ],
+        "hpPerSecond": 791.8181818181818,
+        "hpPerMana": 2.3226666666666667
+    },
+    {
+        "name": "Vivify",
+        "mana": 2050,
+        "castingtime": 1.3,
+        "duration": 0,
+        "cooldown": 0,
+        "targets": 1,
+        "healing": 2101,
+        "extras": [
+            "Also heals all allies with Renewing Mists for 1549"
+        ],
+        "hpPerSecond": 1616.1538461538462,
+        "hpPerMana": 1.0248780487804878
+    },
+    {
+        "name": "Refreshing Jade Wind",
+        "mana": 1750,
+        "castingtime": 0,
+        "duration": 8.6,
+        "cooldown": 8.1,
+        "targets": 6,
+        "healing": 2246,
+        "extras": false,
+        "hpPerSecond": 1566.9767441860467,
+        "hpPerMana": 7.700571428571428
+    },
+    {
+        "name": "Essence Font",
+        "mana": 3600,
+        "castingtime": 0,
+        "duration": 5.4,
+        "cooldown": 12,
+        "targets": 6,
+        "healing": 6726,
+        "extras": false,
+        "hpPerSecond": 7473.333333333332,
+        "hpPerMana": 11.21
+    },
+    {
+        "name": "Expel Harm",
+        "mana": 1500,
+        "castingtime": 0,
+        "duration": 1,
+        "cooldown": 15,
+        "targets": 1,
+        "healing": 2279,
+        "extras": "Also heals the target if cast during Soothing Mist",
+        "hpPerSecond": 2279,
+        "hpPerMana": 1.5193333333333334
+    },
+    {
+        "name": "Yulon",
+        "mana": 2500,
+        "castingtime": 0,
+        "duration": 25,
+        "cooldown": 180,
+        "targets": 3,
+        "healing": 9775,
+        "extras": false,
+        "hpPerSecond": 1173,
+        "hpPerMana": 11.73
+    },
+    {
+        "name": "Revival",
+        "mana": 2187,
+        "castingtime": 0,
+        "duration": 1,
+        "cooldown": 180,
+        "targets": [
+            10,
+            14,
+            20
+        ],
+        "healing": 4576.2,
+        "extras": false,
+        "hpPerSecond": null,
+        "hpPerMana": null
+    },
+    {
+        "name": "Faeline Stomp",
+        "mana": 2000,
+        "castingtime": 0,
+        "duration": 1,
+        "cooldown": 30,
+        "targets": 5,
+        "healing": 6780,
+        "extras": [
+            "Each target is also healed by an Essence Font bolt"
+        ],
+        "hpPerSecond": 33900,
+        "hpPerMana": 16.95
+    },
+    {
+        "name": "Bag of Tricks",
+        "mana": 0,
+        "castingtime": 0,
+        "duration": 1,
+        "cooldown": 90,
+        "targets": 1,
+        "healing": 4652,
+        "extras": false,
+        "hpPerSecond": 4652,
+        "hpPerMana": null
+    }
+]

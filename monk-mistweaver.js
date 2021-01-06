@@ -1,3 +1,4 @@
+fs = require('fs');
 // Monk Mistweaver ability analysis
 
 class ability {
@@ -19,6 +20,8 @@ class ability {
         this.targets = targets;
         this.healing = healing;
         this.extras = extras;
+        this.hpPerSecond = this.healPerSecond();
+        this.hpPerMana = this.healPerMana();
     }
     // Evaluate how many hps per second an ability provides
     healPerSecond() {
@@ -31,21 +34,6 @@ class ability {
     // Evaluate how many hps per mana an ability provides
     healPerMana() {
         return (this.healing * this.targets) / this.mana;
-    }
-
-    report() {
-        // Report details about the ability
-        console.log();
-        console.log(
-            `| ${this.name}\n`+
-            `| hps / second : ${this.healPerSecond()}\n`+
-            `| hps / mana   : ${this.healPerMana()}`
-        );
-        if (ability.extras) {
-            for (var i = 0;i < this.extras.length;i++) {console.log(
-            `| Extra        : ${this.extras[i]}`
-            )};
-        };
     }
 }
 
@@ -194,7 +182,11 @@ abilities.push(
     )
 );
 
-// Display report for each ability
-for (var i = 0;i < abilities.length;i++) {
-    abilities[i].report()
-};
+// Save the full analysis in a local file
+const outputFile = 'monk-mistweaver_analysis.json';
+fs.writeFile(outputFile, JSON.stringify(abilities, null, 4), function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log(`Analysis saved in ${outputFile}`);
+});
